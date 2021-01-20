@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Q-Spotter!</string>
+    <string name="title_activity_maps">Qspotter!</string>
+    <string name="publicar_aviso_desabastecimiento">Publicar Aviso Desabastecimiento</string>
+    <string name="nombre_super">Nombre Supermercado</string>
+    <string name="publicar_aviso_de_fila">PUBLICAR AVISO \n DE FILA</string>
+    <string name="direccion_supermercado">Direccion Supermercado</string>
+    <string name="aviDesText">Avisos de desabastecimiento en la última hora:</string>
+    <string name="avFil">Avisos de fila en la última media hora:</string>
+    <string name="btnMasAvisosFila">VER AVISOS MÁS ANTIGUOS</string>
+    <string name="perEnFila">\tPersonas en la fila</string>
+    <string name="horaDelAviso">Hora del aviso</string>
+    <string name="ej1Rango">\t0 personas</string>
+    <string name="ej1Hora">14:37\t13\–09\-2020</string>
+    <string name="ej2Rango">\t1 a 10 personas</string>
+    <string name="ej2Hora">14:17\t13\-09\-2020</string>
+    <string name="prodDes">\tProducto desabastecido</string>
+    <string name="ej1Desa">\tPapel Higiénico</string>
+    <string name="ej3Hora">14:37\t13\–09\-2020</string>
+    <string name="ej2Desa">\tPan</string>
+    <string name="ej4Hora">13:21\t13\-09\-2020</string>
+    <string name="cerrar_vista">cerrar vista</string>
+    <string name="confirmar_aviso_fila">Confirmar Aviso \nFila</string>
+    <string name="confirmar_aviso_desabastecimiento">Confirmar Aviso \nDesabastecimiento</string>
+    <string name="HeadPubAvFIl">Publicar Aviso de Fila</string>
+    <string name="HeadPubAvDes">Publicar Aviso de Desabastecimiento</string>
+    <string name="SelUnRango">Selecione un rango</string>
+</resources>

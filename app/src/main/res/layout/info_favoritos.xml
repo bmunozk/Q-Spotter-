@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cvInfoRes"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="8dp"
+    card_view:cardElevation="4dp"
+    card_view:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/tvNomSup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Nombre Supermercado"
+            android:textSize="26sp"
+            android:layout_marginBottom="5dp"/>
+
+        <TextView
+            android:id="@+id/tvDirSup"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Direccion Supermercado"
+            android:textSize="24sp"
+            android:layout_marginBottom="5dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/top_border">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantidad Avisos de Fila"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"/>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Cantidad Avisos de Desabastecimiento"
+                    android:textColor="@android:color/white"
+                    android:textSize="18sp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@android:color/white"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/bottom_border">
+
+                <TextView
+                    android:id="@+id/tvCantAvFil"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center"/>
+
+                <LinearLayout
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/white"/>
+
+                <TextView
+                    android:id="@+id/tvCantAvDes"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="5"
+                    android:textColor="@android:color/white"
+                    android:textSize="20sp"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

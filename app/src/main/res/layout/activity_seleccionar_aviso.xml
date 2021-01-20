@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="600sp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <!-- HEADER   -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65sp"
+        android:background="@color/spotterOscuro"
+        android:orientation="horizontal"
+        android:baselineAligned="false">
+
+        <ImageView
+            android:id="@+id/ivFav"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_star"
+            android:layout_marginLeft="5dp"
+            android:layout_marginStart="5dp"
+            app:tint="@color/noFavorito"
+            android:onClick="onClickFavorito"/>
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/nombSup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10sp"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="8sp"
+                android:text="Nombre"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/dirSup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="3sp"
+                android:gravity="left"
+                android:text="Direccion"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                tools:ignore="RtlHardcoded" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/cerVisSup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/cerrar_vista"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                android:onClick="cerrarActividadSelAviso"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- info avisos-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_height="0sp">
+
+
+        <!-- info avisos fila-->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="10sp"
+            android:text="@string/avFil"
+            android:textColor="#7E7E7E"
+            android:textStyle="bold"
+            android:layout_marginStart="10sp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights"
+            android:layout_height="0sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:layout_marginBottom="3sp"
+                android:orientation="horizontal"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/spotterOscuro">
+
+                <TextView
+                    android:id="@+id/textPerFil"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/perEnFila"
+                    android:textSize="12sp"
+                    android:layout_width="0sp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/textHorAvisFil"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/horaDelAviso"
+                    android:textSize="12sp"
+                    android:layout_width="0sp"
+                    android:textColor="#FFFFFF"/>
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_marginBottom="8sp"
+                android:layout_height="0sp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/infoRangos"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    tools:listitem="@layout/avisos">
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:layout_marginBottom="5sp">
+
+            <Button
+                android:id="@+id/masAvFil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/btnMasAvisosFila"
+                android:textColor="@color/spotterOscuro"
+                android:textSize="14sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp" />
+        </LinearLayout> -->
+
+        <!-- Separador -->
+        <LinearLayout
+            android:id="@+id/divider1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#B8B8B8"
+            android:orientation="horizontal" />
+
+        <!-- info avisos desabastecimiento -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="18sp"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="20sp"
+            android:layout_marginLeft="10sp"
+            android:text="@string/aviDesText"
+            android:textColor="#7E7E7E"
+            android:textStyle="bold"
+            android:layout_marginStart="10sp">
+        </TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights"
+            android:layout_height="0sp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_marginLeft="8sp"
+                android:layout_marginRight="8sp"
+                android:layout_marginBottom="3sp"
+                android:orientation="horizontal"
+                android:background="@drawable/round_shape"
+                android:backgroundTint="@color/spotterOscuro">
+
+                <TextView
+                    android:id="@+id/textProdDesFil"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/prodDes"
+                    android:textSize="12sp"
+                    android:layout_width="0sp"
+                    android:textColor="#FFFFFF"/>
+
+                <TextView
+                    android:id="@+id/textHorAvisDes"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:text="@string/horaDelAviso"
+                    android:textSize="12sp"
+                    android:layout_width="0sp"
+                    android:textColor="#FFFFFF"/>
+
+            </LinearLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_marginBottom="8sp"
+                android:layout_height="0sp">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/infoProd"
+                    android:layout_width="match_parent"
+                    android:scrollbars="vertical"
+                    android:layout_height="match_parent"
+                    tools:listitem="@layout/avisos">
+                </androidx.recyclerview.widget.RecyclerView>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <!--<LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="#FFFFFF"
+            android:orientation="vertical"
+            android:layout_marginBottom="5sp">
+
+            <Button
+                android:id="@+id/masAvDes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="#00FFFFFF"
+                android:text="@string/btnMasAvisosFila"
+                android:textColor="@color/spotterOscuro"
+                android:textSize="14sp"
+                android:layout_marginLeft="8sp"
+                android:layout_marginStart="8sp" />
+        </LinearLayout>
+        -->
+
+    </LinearLayout>
+
+    <!-- Separador -->
+    <LinearLayout
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#B8B8B8"
+        android:orientation="horizontal" />
+
+    <!-- Botones publicar avisos -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="70sp"
+        android:background="#FFFFFF"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/botPubAvFil"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="8sp"
+            android:layout_marginLeft="8sp"
+            android:layout_marginRight="1sp"
+            android:layout_marginTop="8sp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/spotterOscuro"
+            android:text="@string/publicar_aviso_de_fila"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginStart="8sp"
+            android:layout_marginEnd="3sp"
+            android:onClick="onClickPubAvisoFila"/>
+
+        <Button
+            android:id="@+id/botPubAvDes"
+            android:layout_width="0sp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginBottom="8sp"
+            android:layout_marginLeft="1sp"
+            android:layout_marginRight="8sp"
+            android:layout_marginTop="8sp"
+            android:background="@drawable/round_shape"
+            android:backgroundTint="@color/spotterOscuro"
+            android:text="@string/publicar_aviso_desabastecimiento"
+            android:textColor="#FFFFFF"
+            android:textSize="12sp"
+            android:layout_marginStart="1sp"
+            android:layout_marginEnd="8sp"
+            android:onClick="onClickPubAvisoDesa"/>
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

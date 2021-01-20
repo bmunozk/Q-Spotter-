@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "330354694956",
+    "firebase_url": "https://q-spotter.firebaseio.com",
+    "project_id": "q-spotter",
+    "storage_bucket": "q-spotter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330354694956:android:8b1417f92be232fd616a89",
+        "android_client_info": {
+          "package_name": "com.example.qspottertest"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330354694956-0ndeg1belts7umdosg48g5qhucn6m6al.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.qspottertest",
+            "certificate_hash": "8988aa1e48d777b69a8d8c6b87a3de576104997f"
+          }
+        },
+        {
+          "client_id": "330354694956-8hcojs5aui8n6uat42aevgugog5l5rif.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYZqxrPxO4ofbJaTAorzXi5_TfSCJfVDM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330354694956-8hcojs5aui8n6uat42aevgugog5l5rif.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

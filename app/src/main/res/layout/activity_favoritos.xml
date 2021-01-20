@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_height="50dp"
+        android:background="@color/spotterOscuro"
+        android:orientation="horizontal"
+        android:layout_width="match_parent">
+
+        <LinearLayout
+            android:layout_width="0sp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <TextView
+                android:id="@+id/PubAvFil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                android:layout_marginTop="8sp"
+                android:layout_marginBottom="8sp"
+                android:text="Supermercados Favoritos"
+                android:textColor="#FFFFFF"
+                android:textSize="22sp"
+                android:layout_marginStart="10sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/cerVisFil"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="top"
+                android:background="#00FFFFFF"
+                android:contentDescription="@string/cerrar_vista"
+                app:srcCompat="@android:drawable/ic_menu_close_clear_cancel"
+                android:onClick="cerrarActividadFavorito"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFavUsr"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@android:color/white"
+            tools:listitem="@layout/info_favoritos"
+            android:visibility="visible"/>
+
+        <TextView
+            android:id="@+id/noHayfav"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="No ha seleccionado supermercados como favoritos"
+            android:gravity="center"
+            android:textSize="32sp"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
